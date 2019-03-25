@@ -52,4 +52,11 @@ public class Test01 {
         Person one = mongoTemplate.findOne(query, Person.class);
         System.out.println(one);
     }
+
+    @Test
+    public void test03(){
+        Query query = new Query(new Criteria("id").is(1));
+        Person one = mongoTemplate.findOne(query, Person.class);
+        System.out.println(one);
+    }
 }
